@@ -1,0 +1,18 @@
+<h3>Task Three</h3>
+<p>
+   Create a page using Angular (No need for Boot Strap in this task)
+   This page will contain 3 buttons (Load Image, Rotate Image, Save Image)
+   When a User selects Load Image, a file open dialog should appear, and should let the user select only one image
+   when the image is selected, it should be shown on the page 
+   when the user clicks the Rotate Image button, the image should rotate by 90 degrees.
+   User can click the rotate image button as many times as they wish to
+   finally, when the user clicks on the save image button, the image must be saved back to disk in the current rotated state with a new file name.</p>
+
+<input type="file" accept="image/*" (change)="updateSource($event)">
+<button (click)="onRotate()">Rotate</button>
+<button (click)="saveImage()">Save</button>
+<br>
+<img *ngIf="source" [src]="source" src="" id="img" width = "550" height="550">
+<canvas id="canvas" width = "550" height="550"></canvas>
+
+  

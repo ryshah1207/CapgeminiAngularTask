@@ -1,0 +1,13 @@
+<h3>Task Two</h3>
+<p>
+  Create a page using Angular Js and Bootstrap (must be a responsive page)
+  the page will contain one button.  
+  When the button is clicked, a file open dialog will pop up.  
+  User must be able to select 1 or more images from the dialog  
+  when the user selects the images, they should be displayed on the Bootstrap Grid on the web page  
+  The page should be responsive for all resolutions</p>
+  <br>
+  <p>Choose images: </p><input type='file' accept="image/*" (change)="onSelectFile($event)" multiple>
+  <div class="col-sm-12" style="background-color:white;">
+<img *ngFor='let url of urls'  [src]="url" height="200"> <br/>
+</div>
